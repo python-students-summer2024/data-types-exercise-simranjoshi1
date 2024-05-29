@@ -12,8 +12,10 @@ def calculate_profit():
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
     """
     total_sales = input("Enter the amount of total sales: ")
-    profit = format(int(total_sales)*0.23, ".2f")
-    print("\"Profit: $"+str(profit)+"\" for sales of $"+total_sales)
+    profit = float(total_sales) * 0.23
+    profit_with_commas = f'{profit:,.2f}'  
+    print(f"Profit: ${profit_with_commas}")
+
 
 
 def calculate_quotient_and_remainder():
@@ -73,7 +75,7 @@ def align_text():
     price3 = input("Enter price #3: ")
     
     print("\nHere are your prices!\n")
-    print("Price #1: $"+str(format(float(price1), ".2f").rjust(10)))
-    print("Price #2: $"+str(format(float(price2), ".2f").rjust(10)))
-    print("Price #3: $"+str(format(float(price3), ".2f").rjust(10)))
+    print("Price #1: $"+str(format(float(price1), ".2f").rjust(8)))
+    print("Price #2: $"+str(format(float(price2), ".2f").rjust(8)))
+    print("Price #3: $"+str(format(float(price3), ".2f").rjust(8)))
 
